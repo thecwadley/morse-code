@@ -1,6 +1,6 @@
 console.log("test1");
 
-import Speech from "speak-tts";
+import Speech from "https://github.com/tom-s/speak-tts.git";
 
 let speech;
 
