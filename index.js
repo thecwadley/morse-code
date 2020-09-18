@@ -1,6 +1,3 @@
-import "./styles.css";
-//import tts from "tts-js";
-
 import Speech from "speak-tts";
 
 let speech;
