@@ -1,7 +1,7 @@
 import Speech from "speak-tts";
 
 let speech;
-
+console.log("test1");
 function init() {
   speech = new Speech();
   speech.init({
