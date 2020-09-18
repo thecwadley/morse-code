@@ -1,0 +1,19 @@
+body {
+  font-family: "sans-serif";
+  background-color: lightgray;
+}
+
+#letter {
+  border-width: 0px;
+  border-color: lightgray;
+  font-size: 100px;
+  background-color: lightgray;
+  border-bottom-width: 10px;
+}
+
+.button {
+  width: 32%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-top: 10px;
+}
