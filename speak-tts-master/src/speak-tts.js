@@ -1,4 +1,4 @@
-import { splitSentences, validateLocale, isString, size, isNan, isNil, isObject, trim } from './utils'
+import { splitSentences, validateLocale, isString, size, isNan, isNil, isObject, trim } from '../utils'
 
 class SpeakTTS {
   constructor() {
