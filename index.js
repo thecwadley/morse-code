@@ -1,4 +1,4 @@
-import Speech from "../speak-tts-master";
+import Speech from "../speak-tts-master/src/speak-tts.js";
 let speech;
 
 function init() {
