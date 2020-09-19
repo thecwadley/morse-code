@@ -1,4 +1,4 @@
-import { splitSentences, validateLocale, isString, size, isNan, isNil, isObject, trim } from '../morse-code/speak-tts-master/src/speak-tts.js'
+import { splitSentences, validateLocale, isString, size, isNan, isNil, isObject, trim } from '../src/speak-tts.js'
 
 class SpeakTTS {
   constructor() {
