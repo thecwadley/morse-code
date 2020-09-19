@@ -1,4 +1,4 @@
-import Speech from "../speak-tts-master/src/speak-tts.js";
+import Speech from "../morse-code/speak-tts-master/src/speak-tts.js";
 let speech;
 
 function init() {
