@@ -1,8 +1,4 @@
-console.log("test1");
-console.log("test1");
-
-/*import Speech from "speak-tts";*/
-let Speech = require("speak-tts");
+import Speech from "speak-tts";
 let speech;
 
 function init() {
