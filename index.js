@@ -82,7 +82,7 @@ var morseInput = [];
 button.style.margin = "-8px";
 //console.log("resolution: " + window.innerWidth + "x" + window.innerWidth);
 button.style.width = window.innerWidth /** 0.96*/ + "px";
-button.style.height = window.innerHeight - window.innerHeight * 0.075 + "px";
+button.style.height = window.innerHeight - window.innerHeight * 0.1 + "px";
 
 giveMorse.onclick = function morseGiven() {
   button.innerHTML = morse[number - 1];
