@@ -141,6 +141,51 @@ function startReading() {
   }
 }
 
+function endClick(start) {
+    end = new Date();
+    button.style.backgroundColor = "lightgray";
+    body.style.backgroundColor = "lightgray";
+    //console.log("test");
+    total = end - start;
+    //alert("Button held for " + total + " seconds.");
+    morseInput.push(total);
+    //console.log("morseInput: " + morseInput)
+
+    for (var i = 0; i < letter[number - 1].length; i++) {
+      //console.log("CorrValue: " + letter[number - 1][i]);
+      //console.log("MyValue: " + morseInput[i]);
+      console.log(morseInput);
+      if (morseInput[i] === undefined) {
+        console.log("___ (____)");
+      } else if (
+        letter[number - 1][i] > morseInput[i] &&
+        letter[number - 1][i] === 150
+      ) {
+        console.log(letter[number - 1][i] + "sdjfdjsd" + morseInput[i]);
+        console.log("Yes (Dot)");
+        rightAns();
+      } else if (
+        letter[number - 1][i] < morseInput[i] &&
+        letter[number - 1][i] === 151
+      ) {
+        console.log(letter[number - 1][i] + "sdjfdjsd" + morseInput[i]);
+        console.log("Yes (Dash)");
+        rightAns();
+      } else {
+        console.log("Wrong!");
+        button.style.backgroundColor = "#ff6969";
+        body.style.backgroundColor = "#ff6969";
+        reading = "true";
+        soundLetter(number);
+        i = 0;
+        morseInput = [];
+        button.innerHTML = "";
+        //wrong.play();
+        break;
+      }
+    }
+}
+
 function spellLetter() {
   //console.log("crackers");
   //button.style.backgroundColor = "#000000";
@@ -150,52 +195,10 @@ function spellLetter() {
 
     button.addEventListener("mousedown", function touchstarted() {
     start = new Date();
-    //console.log("test");
   });
 
   button.addEventListener("mouseup", function touchended() {
-    end = new Date();
-    button.style.backgroundColor = "lightgray";
-    body.style.backgroundColor = "lightgray";
-    //console.log("test");
-    total = end - start;
-    //alert("Button held for " + total + " seconds.");
-    morseInput.push(total);
-    //console.log("morseInput: " + morseInput)
-
-    for (var i = 0; i < letter[number - 1].length; i++) {
-      //console.log("CorrValue: " + letter[number - 1][i]);
-      //console.log("MyValue: " + morseInput[i]);
-      console.log(morseInput);
-      if (morseInput[i] === undefined) {
-        console.log("___ (____)");
-      } else if (
-        letter[number - 1][i] > morseInput[i] &&
-        letter[number - 1][i] === 150
-      ) {
-        console.log(letter[number - 1][i] + "sdjfdjsd" + morseInput[i]);
-        console.log("Yes (Dot)");
-        rightAns();
-      } else if (
-        letter[number - 1][i] < morseInput[i] &&
-        letter[number - 1][i] === 151
-      ) {
-        console.log(letter[number - 1][i] + "sdjfdjsd" + morseInput[i]);
-        console.log("Yes (Dash)");
-        rightAns();
-      } else {
-        console.log("Wrong!");
-        button.style.backgroundColor = "#ff6969";
-        body.style.backgroundColor = "#ff6969";
-        reading = "true";
-        soundLetter(number);
-        i = 0;
-        morseInput = [];
-        button.innerHTML = "";
-        //wrong.play();
-        break;
-      }
-    }
+    endClick(start);
   });
   
   
@@ -205,48 +208,7 @@ function spellLetter() {
   });
 
   button.addEventListener("touchend", function touchended() {
-    end = new Date();
-    button.style.backgroundColor = "lightgray";
-    body.style.backgroundColor = "lightgray";
-    //console.log("test");
-    total = end - start;
-    //alert("Button held for " + total + " seconds.");
-    morseInput.push(total);
-    //console.log("morseInput: " + morseInput)
-
-    for (var i = 0; i < letter[number - 1].length; i++) {
-      //console.log("CorrValue: " + letter[number - 1][i]);
-      //console.log("MyValue: " + morseInput[i]);
-      console.log(morseInput);
-      if (morseInput[i] === undefined) {
-        console.log("___ (____)");
-      } else if (
-        letter[number - 1][i] > morseInput[i] &&
-        letter[number - 1][i] === 150
-      ) {
-        console.log(letter[number - 1][i] + "sdjfdjsd" + morseInput[i]);
-        console.log("Yes (Dot)");
-        rightAns();
-      } else if (
-        letter[number - 1][i] < morseInput[i] &&
-        letter[number - 1][i] === 151
-      ) {
-        console.log(letter[number - 1][i] + "sdjfdjsd" + morseInput[i]);
-        console.log("Yes (Dash)");
-        rightAns();
-      } else {
-        console.log("Wrong!");
-        button.style.backgroundColor = "#ff6969";
-        body.style.backgroundColor = "#ff6969";
-        reading = "true";
-        soundLetter(number);
-        i = 0;
-        morseInput = [];
-        button.innerHTML = "";
-        //wrong.play();
-        break;
-      }
-    }
+    endClick(start);
   });
 }
 
