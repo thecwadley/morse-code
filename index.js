@@ -141,7 +141,7 @@ function startReading() {
   }
 }
 
-/*function endClick(time) {
+function endClick(time) {
     var end = new Date();
     button.style.backgroundColor = "lightgray";
     body.style.backgroundColor = "lightgray";
@@ -184,64 +184,16 @@ function startReading() {
         break;
       }
     }
-}*/
+}
 
 function spellLetter() {
   //console.log("crackers");
   //button.style.backgroundColor = "#000000";
   var start;
-  var end;
   var total;
  
-  button.addEventListener("mousedown touchstart", function touchstarted() {
-    start = new Date();
-  });
   
-  button.addEventListener("mouseup touchend", function touchended() {
-    end = new Date();
-    button.style.backgroundColor = "lightgray";
-    body.style.backgroundColor = "lightgray";
-    //console.log("test");
-    total = end - start;
-    //alert("Button held for " + total + " seconds.");
-    morseInput.push(total);
-    //console.log("morseInput: " + morseInput)
-
-    for (var i = 0; i < letter[number - 1].length; i++) {
-      //console.log("CorrValue: " + letter[number - 1][i]);
-      //console.log("MyValue: " + morseInput[i]);
-      console.log(morseInput);
-      if (morseInput[i] === undefined) {
-        console.log("___ (____)");
-      } else if (
-        letter[number - 1][i] > morseInput[i] &&
-        letter[number - 1][i] === 150
-      ) {
-        console.log(letter[number - 1][i] + "sdjfdjsd" + morseInput[i]);
-        console.log("Yes (Dot)");
-        rightAns();
-      } else if (
-        letter[number - 1][i] < morseInput[i] &&
-        letter[number - 1][i] === 151
-      ) {
-        console.log(letter[number - 1][i] + "sdjfdjsd" + morseInput[i]);
-        console.log("Yes (Dash)");
-        rightAns();
-      } else {
-        console.log("Wrong!");
-        button.style.backgroundColor = "#ff6969";
-        body.style.backgroundColor = "#ff6969";
-        reading = "true";
-        soundLetter(number);
-        i = 0;
-        morseInput = [];
-        button.innerHTML = "";
-        //wrong.play();
-        break;
-      }
-    }
-  });
-  /*  button.addEventListener("mousedown", function touchstarted() {
+  button.addEventListener("mousedown", function touchstarted() {
     start = new Date();
   });
 
@@ -251,13 +203,15 @@ function spellLetter() {
   
   
   button.addEventListener("touchstart", function touchstarted() {
+    event.preventDefault();
     start = new Date();
     //console.log("test");
   });
 
   button.addEventListener("touchend", function touchended() {
+    event.preventDefault();
     endClick(start);
-  });*/
+  });
 }
 
 function rightAns() {
