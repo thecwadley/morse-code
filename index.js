@@ -141,12 +141,12 @@ function startReading() {
   }
 }
 
-function endClick(start) {
-    end = new Date();
+function endClick(time) {
+    var end = new Date();
     button.style.backgroundColor = "lightgray";
     body.style.backgroundColor = "lightgray";
     //console.log("test");
-    total = end - start;
+    total = end - time;
     //alert("Button held for " + total + " seconds.");
     morseInput.push(total);
     //console.log("morseInput: " + morseInput)
@@ -190,7 +190,6 @@ function spellLetter() {
   //console.log("crackers");
   //button.style.backgroundColor = "#000000";
   var start;
-  var end;
   var total;
 
     button.addEventListener("mousedown", function touchstarted() {
