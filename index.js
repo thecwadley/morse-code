@@ -9,6 +9,7 @@ function init() {
     rate: 1,
     pitch: 1
   });
+  spellLetter();
 }
 
 var button = document.getElementById("letter");
