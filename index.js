@@ -1,6 +1,9 @@
 import Speech from "../morse-code/speak-tts-master/src/speak-tts.js";
 let speech;
 
+var right = new Audio('right.mp3');
+var wrong = new Audio('wrong-2.0.mp3');
+
 function init() {
   speech = new Speech();
   speech.init({
@@ -181,7 +184,7 @@ function endClick(time) {
         i = 0;
         morseInput = [];
         button.innerHTML = "";
-        //wrong.play();
+        wrong.play();
         break;
       }
     }
@@ -234,7 +237,7 @@ function rightAns() {
     reading = "true";
     startReading();
     morseInput = [];
-    //right.play();
+    right.play();
   }
 }
 
