@@ -9,8 +9,6 @@ function init() {
     rate: 1,
     pitch: 1
   });
-  spellLetter();
-  soundLetter(number);
 }
 
 var button = document.getElementById("letter");
