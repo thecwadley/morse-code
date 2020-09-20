@@ -2,7 +2,7 @@ import Speech from "../morse-code/speak-tts-master/src/speak-tts.js";
 let speech;
 
 var right = new Audio('audio/right.mp3');
-var wrong = new Audio('audio/wrong-2.0.mp3');
+var wrong = new Audio('audio/wrong-2.mp3');
 
 function init() {
   speech = new Speech();
