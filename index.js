@@ -143,6 +143,7 @@ function startReading() {
 
 function endClick(time) {
     var end = new Date();
+    var total;
     button.style.backgroundColor = "lightgray";
     body.style.backgroundColor = "lightgray";
     //console.log("test");
