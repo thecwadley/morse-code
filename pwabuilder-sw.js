@@ -1,7 +1,16 @@
 // This is the service worker with the Cache-first network
 const CACHE = "pwabuilder-precache";
 const precacheFiles = [
-  /* Add an array of files to precache for your app */
+  "images/icons/icon-128x128.png",
+  "images/icons/icon-144x144.png",
+  "images/icons/icon-152x152.png",
+  "images/icons/icon-192x192.png",
+  "images/icons/icon-256x256.png",
+  "images/icons/icon-512x512.png",
+  "index.html",
+  "index.js",
+  "install.js",
+  "style.css"
 ];
 
 self.addEventListener("install", function (event) {
