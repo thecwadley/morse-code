@@ -35,7 +35,7 @@
         // Register the service worker
         navigator.serviceWorker
           .register("pwabuilder-sw.js", {
-            enabled: environment.production,
+            scope: "./"
             registrationStrategy: 'registerImmediately'
           })
           .then(function (reg) {
