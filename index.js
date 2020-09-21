@@ -180,11 +180,13 @@ function endClick(time) {
         button.style.backgroundColor = "#ff6969";
         body.style.backgroundColor = "#ff6969";
         reading = "true";
-        soundLetter(number);
+        wrong.play();
         i = 0;
         morseInput = [];
         button.innerHTML = "";
-        wrong.play();
+        setTimeout(function() {
+          soundLetter(number);
+        }, 500);
         break;
       }
     }
@@ -235,9 +237,11 @@ function rightAns() {
     button.style.backgroundColor = "#85ff9b";
     body.style.backgroundColor = "#85ff9b";
     reading = "true";
-    startReading();
     morseInput = [];
     right.play();
+    setTimeout(function() {
+      startReading();
+    }, 500);
   }
 }
 
