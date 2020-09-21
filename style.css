@@ -10,7 +10,7 @@ body {
   border-color: lightgray;
   font-size: 100px;
   background-color: lightgray;
-  border-bottom-width: 10px;
+  /*border-bottom-width: 10px;*/
 }
 
 .button {
