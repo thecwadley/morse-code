@@ -186,7 +186,7 @@ function endClick(time) {
         button.innerHTML = "";
         setTimeout(function() {
           soundLetter(number);
-        }, 500);
+        }, 400);
         break;
       }
     }
@@ -241,7 +241,7 @@ function rightAns() {
     right.play();
     setTimeout(function() {
       startReading();
-    }, 500);
+    }, 400);
   }
 }
 
