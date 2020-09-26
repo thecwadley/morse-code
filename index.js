@@ -184,7 +184,6 @@ function endClick(time) {
         wrong.play();
         i = 0;
         morseInput = [];
-        button.innerHTML = "";
         setTimeout(function() {
           soundLetter(number);
         }, 400);
