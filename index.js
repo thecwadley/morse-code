@@ -94,6 +94,7 @@ giveMorse.onclick = function morseGiven() {
 number = Math.ceil(Math.random() * letter.length);
 
 function playSound(letter) {
+  button.innerHTML = letter;
   speech.setLanguage("en-US");
   speech.speak({
     text: letter,
