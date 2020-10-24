@@ -1,4 +1,4 @@
-import Speech from "../morse-code/speak-tts-master/src/speak-tts.js";
+import Speech from "https://raw.githubusercontent.com/tom-s/speak-tts/master/lib/speak-tts.js";
 let speech;
 
 var right = new Audio('https://raw.githubusercontent.com/thecwadley/morse-code/master/audio/right.mp3');
